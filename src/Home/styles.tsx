@@ -63,27 +63,23 @@ export const Homecontainer = styled.main`
     /* background: #f22; */
   }
   .ButtonDiv button {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     /* border: solid 1rem #ec9e0e; */
     border-radius: 50%;
     background: #fff;
     cursor: pointer;
   }
   .TopDiv {
-    /* background: #fff; */
-    /* margin: 0; */
-    margin-bottom: -2.3rem ;
+    margin-bottom: -5rem ;
   }
   .MiddleDiv {
-    /* background: #fff; */
-    margin-bottom: 2.4rem;
-    gap: 12rem;
+    margin-bottom: -1rem;
+    gap: 10rem;
   }
   .BottomDiv {
-    /* background: #fff; */
-    gap: 4.6rem;
-    margin-bottom: -3.1rem;
+    gap: 2.5rem;
+    margin-bottom: -1.5rem;
   }
   .ButtonScissors {
     /* border-color: linear-gradient(, #ec9e0e, #eca922); */
@@ -96,7 +92,7 @@ export const Homecontainer = styled.main`
          0px 6px 3px 1px #222;
          /* 5px 5px 10px #444; */
   }
-  .ButtonSpok {
+  .ButtonSpock {
     border: solid 1rem #40b9ce;
     box-shadow: inset 0px 6px 3px #999,
          0px 6px 3px 1px #222;
