@@ -45,7 +45,7 @@ export const Homecontainer = styled.main`
     color: blue;
   }
   .MainDiv {
-    background: #fff;
+    /* background: #fff; */
 
   }
   .Container {
@@ -63,10 +63,12 @@ export const Homecontainer = styled.main`
     /* background: #f22; */
   }
   .ButtonDiv button {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+    /* border: solid 1rem #ec9e0e; */
     border-radius: 50%;
-    /* background: #fff; */
+    background: #fff;
+    cursor: pointer;
   }
   .TopDiv {
     /* background: #fff; */
@@ -82,5 +84,36 @@ export const Homecontainer = styled.main`
     /* background: #fff; */
     gap: 4.6rem;
     margin-bottom: -3.1rem;
+  }
+  .ButtonScissors {
+    /* border-color: linear-gradient(, #ec9e0e, #eca922); */
+    /* border: 10px solid;
+    border-image: linear-gradient(to right, #ec9e0e, #eca922) 1;
+    border-radius: 50%;
+    border-radius: 20px; */
+    border: solid 1rem #ec9e0e;
+    box-shadow: inset 0px 6px 3px #999,
+         0px 6px 3px 1px #222;
+         /* 5px 5px 10px #444; */
+  }
+  .ButtonSpok {
+    border: solid 1rem #40b9ce;
+    box-shadow: inset 0px 6px 3px #999,
+         0px 6px 3px 1px #222;
+  }
+  .ButtonPaper {
+    border: solid 1rem #4865f4;
+    box-shadow: inset 0px 6px 3px #999,
+         0px 6px 3px 1px #222;
+  }
+  .ButtonRock {
+    border: solid 1rem #dc2e4e;
+    box-shadow: inset 0px 6px 3px #999,
+         0px 6px 3px 1px #222;
+  }
+  .ButtonLizard {
+    border: solid 1rem #834fe3;
+    box-shadow: inset 0px 6px 3px #999,
+         0px 6px 3px 1px #222;
   }
 `
