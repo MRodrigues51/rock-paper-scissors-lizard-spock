@@ -6,5 +6,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     background: radial-gradient(circle, #1f3756, #141539);
   }
+  body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+  }
 
 `
