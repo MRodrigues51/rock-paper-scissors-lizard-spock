@@ -1,4 +1,6 @@
 import { Homecontainer } from "./styles"
+import Modal from 'react-modal'
+import { useState } from "react"
 import Logo from '../assets/img/logo-bonus.svg'
 import MainBG from '../assets/img/bg-pentagon.svg'
 import IconScissors from '../assets/img/icon-scissors.svg'
@@ -6,6 +8,7 @@ import IconSpock from '../assets/img/icon-spock.svg'
 import IconPaper from '../assets/img/icon-paper.svg'
 import IconLizard from '../assets/img/icon-lizard.svg'
 import IconRock from '../assets/img/icon-rock.svg'
+import ReactModal from "react-modal"
 
 export function Home() {
 
@@ -23,6 +26,29 @@ export function Home() {
   }
   function handleClickRock() {
     console.log('Pedra');
+  }
+
+  Modal.setAppElement('#root')
+
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      width: '200px',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
+
+  const [modalIsOpen, setIsOpen] = useState(false)
+
+  function handleOpenModal() {
+    setIsOpen(true)
+  }
+  function handleCloseModal() {
+    setIsOpen(false)
   }
 
   return (
@@ -68,7 +94,16 @@ export function Home() {
           </div>
         </div>
         <div className="RulesDiv">
-          <button>RULES</button>
+          <button className="ModalButton" onClick={handleOpenModal}>RULES</button>
+          <ReactModal
+
+            isOpen={modalIsOpen}
+            onRequestClose={handleCloseModal}
+            className="Modal"
+          >
+            <h2>Aqui é o modal</h2>
+            <button onClick={handleCloseModal}>Close Modal</button>
+          </ReactModal>
         </div>
       </div>
     </Homecontainer>

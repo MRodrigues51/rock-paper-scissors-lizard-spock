@@ -133,4 +133,13 @@ export const Homecontainer = styled.main`
     color: #fff;
     letter-spacing: 2px;
   }
+  .RulesDiv .Modal {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    width: 1000px;
+    background-color: papayawhip;
+  }
 `
