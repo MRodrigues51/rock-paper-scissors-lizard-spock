@@ -1,6 +1,9 @@
-import { Homecontainer } from "./styles"
 import Modal from 'react-modal'
 import { useState } from "react"
+import { XCircle } from 'phosphor-react'
+
+import { Homecontainer } from "./styles"
+
 import Logo from '../assets/img/logo-bonus.svg'
 import MainBG from '../assets/img/bg-pentagon.svg'
 import IconScissors from '../assets/img/icon-scissors.svg'
@@ -8,7 +11,7 @@ import IconSpock from '../assets/img/icon-spock.svg'
 import IconPaper from '../assets/img/icon-paper.svg'
 import IconLizard from '../assets/img/icon-lizard.svg'
 import IconRock from '../assets/img/icon-rock.svg'
-import ReactModal from "react-modal"
+import RulesBG from '../assets/img/image-rules-bonus.svg'
 
 export function Home() {
 
@@ -29,18 +32,6 @@ export function Home() {
   }
 
   Modal.setAppElement('#root')
-
-  const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      width: '200px',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-    },
-  };
 
   const [modalIsOpen, setIsOpen] = useState(false)
 
@@ -95,15 +86,26 @@ export function Home() {
         </div>
         <div className="RulesDiv">
           <button className="ModalButton" onClick={handleOpenModal}>RULES</button>
-          <ReactModal
-
+          <Modal
             isOpen={modalIsOpen}
             onRequestClose={handleCloseModal}
-            className="Modal"
+            contentLabel="Example Modal"
+            overlayClassName="modal-overlay"
+            className="modal-content"
           >
-            <h2>Aqui é o modal</h2>
-            <button onClick={handleCloseModal}>Close Modal</button>
-          </ReactModal>
+            <div style={{
+              backgroundImage: `url(${RulesBG})`,
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              width: '500px',
+              height: '500px'
+            }}>
+              <span className='buttonCloseModal' onClick={handleCloseModal}>
+                <XCircle size={32} weight='fill' />
+              </span>
+            </div>
+
+          </Modal>
         </div>
       </div>
     </Homecontainer>

@@ -132,8 +132,9 @@ export const Homecontainer = styled.main`
     border-radius: 8px;
     color: #fff;
     letter-spacing: 2px;
+
   }
-  .RulesDiv .Modal {
+  /* .RulesDiv .Modal {
     position: absolute;
     top: 40px;
     left: 40px;
@@ -141,5 +142,13 @@ export const Homecontainer = styled.main`
     bottom: 40px;
     width: 1000px;
     background-color: papayawhip;
+  } */
+  .ModalContent h2{
+    color: #fff;
+    background: #fff;
   }
+  .CloseModal {
+    background: #fff;
+  }
+
 `
