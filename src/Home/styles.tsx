@@ -10,6 +10,9 @@ export const Homecontainer = styled.main`
     justify-content: center;
     margin-top: 2rem;
   }
+  /* .Container {
+    max-width: 90vw;
+  } */
   .Header {
     display: flex;
     justify-content: space-between;
@@ -18,6 +21,7 @@ export const Homecontainer = styled.main`
     height: 160px;
     border: 2px solid #fff;
     border-radius: 20px;
+    margin: 0;
   }
   .ScoreDiv {
     margin: 0;
@@ -46,7 +50,7 @@ export const Homecontainer = styled.main`
   }
   .MainDiv {
     /* background: #fff; */
-
+    margin-top: 5rem;
   }
   .Container {
     display: flex;
@@ -57,15 +61,16 @@ export const Homecontainer = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
+    /* margin: 0; */
     margin-top: -5rem;
     gap: 1rem;
-    /* background: #f22; */
+    /* background: #834fe3; */
+    /* margin-top: 0; */
+    /* margin-bottom: 0; */
   }
   .ButtonDiv button {
     width: 130px;
     height: 130px;
-    /* border: solid 1rem #ec9e0e; */
     border-radius: 50%;
     background: #fff;
     cursor: pointer;
@@ -111,5 +116,21 @@ export const Homecontainer = styled.main`
     border: solid 1rem #834fe3;
     box-shadow: inset 0px 6px 3px #999,
          0px 6px 3px 1px #222;
+  }
+  .RulesDiv {
+    display: flex;
+    width: 100vw;
+    justify-content: flex-end;
+    /* margin: 0; */
+    /* background: #4865f4; */
+  }
+  .RulesDiv button {
+    width: 100px;
+    height: 40px;
+    margin-right: 5%;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    color: #fff;
+    letter-spacing: 2px;
   }
 `

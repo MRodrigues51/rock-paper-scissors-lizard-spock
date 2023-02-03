@@ -42,8 +42,6 @@ export function Home() {
           backgroundImage: `url(${MainBG})`,
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          width: '500px',
-          height: '500px'
         }}>
           <div className="ButtonDiv">
             <div className="TopDiv">
@@ -67,10 +65,11 @@ export function Home() {
                 <img src={IconRock} alt="" />
               </button>
             </div>
-
           </div>
         </div>
-
+        <div className="RulesDiv">
+          <button>RULES</button>
+        </div>
       </div>
     </Homecontainer>
   )
