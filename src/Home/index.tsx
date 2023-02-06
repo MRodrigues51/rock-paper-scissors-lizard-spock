@@ -62,53 +62,84 @@ export function Home() {
   const Decremment = () => {
     setScore(Score - 1)
   }
-
   useEffect(() => {
     if (Player === 0 && Machine === 1) {
-      console.log(Player + 'Tesoura Ganhou')
-      setScore(Score + 1)
+      console.log(Player + 'Tesoura Ganhou(Player)')
+      { () => setScore(Score + 1) }
     } else if (Player === 0 && Machine === 2) {
-      console.log(Machine + 'Rock Ganhou')
-      setScore(Score - 1)
+      console.log(Machine + 'Rock Ganhou(Machine)')
+      { () => setScore(Score - 1) }
     } else if (Player === 0 && Machine === 3) {
-      console.log(Player + 'Tesoura Ganhou')
-      setScore(Score + 1)
+      console.log(Player + 'Tesoura Ganhou(Player)')
+      { () => setScore(Score + 1) }
     } else if (Player === 0 && Machine === 4) {
-      console.log(Machine + 'Spock Ganhou')
-      setScore(Score - 1)
+      console.log(Machine + 'Spock Ganhou(Machine)')
+      { () => setScore(Score - 1) }
     } else if (Player === 0 && Machine === 0) {
       console.log('Ninguém Ganhou')
+
+    } else if (Player === 1 && Machine === 0) {
+      console.log(Machine + 'Papel Ganhou(Machine)')
+      { () => setScore(Score + 1) }
     } else if (Player === 1 && Machine === 2) {
-      console.log(Player + 'Papel Ganhou')
-      setScore(Score + 1)
+      console.log(Player + 'Papel Ganhou(Player)')
+      { () => setScore(Score + 1) }
     } else if (Player === 1 && Machine === 3) {
-      console.log(Machine + 'Lagarto Ganhou')
-      setScore(Score - 1)
+      console.log(Machine + 'Lagarto Ganhou(Machine)')
+      { () => setScore(Score - 1) }
     } else if (Player === 1 && Machine === 4) {
-      console.log(Player + 'Papel Ganhou')
-      setScore(Score + 1)
+      console.log(Player + 'Papel Ganhou(Player)')
+      { () => setScore(Score + 1) }
     } else if (Player === 1 && Machine === 1) {
       console.log('Ninguém Ganhou')
+
+    } else if (Player === 2 && Machine === 0) {
+      console.log(Player + 'Pedra Ganhou(Player)')
+      { () => setScore(Score + 1) }
+    } else if (Player === 2 && Machine === 1) {
+      console.log(Machine + 'Pedra Ganhou(Machine)')
+      { () => setScore(Score + 1) }
     } else if (Player === 2 && Machine === 3) {
-      console.log(Player + 'Pedra Ganhou')
-      setScore(Score + 1)
+      console.log(Player + 'Pedra Ganhou(Player)')
+      { () => setScore(Score + 1) }
     } else if (Player === 2 && Machine === 4) {
       console.log(Machine + 'Spok Ganhou')
-      setScore(Score - 1)
+      { () => setScore(Score - 1) }
     } else if (Player === 2 && Machine === 2) {
       console.log('Ninguém Ganhou')
+
+    } else if (Player === 3 && Machine === 0) {
+      console.log(Machine + 'Tesoura Ganhou(Machine)')
+      { () => setScore(Score + 1) }
+    } else if (Player === 3 && Machine === 1) {
+      console.log(Player + 'Lagarto Ganhou(Player)')
+      { () => setScore(Score + 1) }
+    } else if (Player === 3 && Machine === 2) {
+      console.log(Machine + 'Pedra Ganhou(Machine)')
+      { () => setScore(Score + 1) }
     } else if (Player === 3 && Machine === 4) {
-      console.log(Player + 'Lagarto Ganhou')
-      setScore(Score + 1)
+      console.log(Player + 'Lagarto Ganhou(Player)')
+      { () => setScore(Score + 1) }
     } else if (Player === 3 && Machine === 3) {
       console.log('Ninguém Ganhou')
+
+    } else if (Player === 4 && Machine === 0) {
+      console.log(Player + 'Spock Ganhou(Player)')
+      { () => setScore(Score + 1) }
+    } else if (Player === 4 && Machine === 1) {
+      console.log(Machine + 'Papel Ganhou(Machine)')
+      { () => setScore(Score + 1) }
+    } else if (Player === 4 && Machine === 2) {
+      console.log(Player + 'Spock Ganhou(Player)')
+      { () => setScore(Score + 1) }
+    } else if (Player === 4 && Machine === 3) {
+      console.log(Machine + 'Lagarto Ganhou(Machine)')
     } else if (Player === 4 && Machine === 4) {
       console.log('Ninguém Ganhou')
     } else {
       console.log('fim')
     }
-  }, [playerCheck])
-
+  })
 
   console.log(Score)
 
