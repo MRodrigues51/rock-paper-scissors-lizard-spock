@@ -1,5 +1,5 @@
 import Modal from 'react-modal'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { XCircle } from 'phosphor-react'
 
 import { Homecontainer } from "./styles"
@@ -14,22 +14,103 @@ import IconRock from '../assets/img/icon-rock.svg'
 import RulesBG from '../assets/img/image-rules-bonus.svg'
 
 export function Home() {
+  const [Player, setPlayer] = useState<number>()
+  const [Machine, setMachine] = useState<number>()
+  const [Score, setScore] = useState(0)
+
+  //
+  console.log('Aqui é o score' + Score)
+  let playerCheck
+
+  function PlayerMachine() {
+    setMachine(Math.floor(Math.random() * 5))
+  }
 
   function handleClickScissors() {
-    console.log('Tesoura');
+    playerCheck = 0 //'tesoura'
+    setPlayer(playerCheck)
+    PlayerMachine()
   }
-  function handleClickSpock() {
-    console.log('Spock');
-  }
+
   function handleClickPaper() {
-    console.log('Papel');
-  }
-  function handleClickLizard() {
-    console.log('Lagarto');
+    playerCheck = 1 //'Paper'
+    setPlayer(playerCheck)
+    PlayerMachine()
   }
   function handleClickRock() {
-    console.log('Pedra');
+    playerCheck = 2 //'Rock'
+    setPlayer(playerCheck)
+    PlayerMachine()
   }
+  function handleClickLizard() {
+    playerCheck = 3 //'Lizard'
+    setPlayer(playerCheck)
+    PlayerMachine()
+  }
+  function handleClickSpock() {
+    playerCheck = 4 //'Spock'
+    setPlayer(playerCheck)
+    PlayerMachine()
+  }
+  console.log('Jogador digitou: ' + Player);
+
+  console.log('A máquina digitou: ' + Machine)
+
+  const Incremment = () => {
+    setScore(Score + 1)
+  }
+  const Decremment = () => {
+    setScore(Score - 1)
+  }
+
+  useEffect(() => {
+    if (Player === 0 && Machine === 1) {
+      console.log(Player + 'Tesoura Ganhou')
+      setScore(Score + 1)
+    } else if (Player === 0 && Machine === 2) {
+      console.log(Machine + 'Rock Ganhou')
+      setScore(Score - 1)
+    } else if (Player === 0 && Machine === 3) {
+      console.log(Player + 'Tesoura Ganhou')
+      setScore(Score + 1)
+    } else if (Player === 0 && Machine === 4) {
+      console.log(Machine + 'Spock Ganhou')
+      setScore(Score - 1)
+    } else if (Player === 0 && Machine === 0) {
+      console.log('Ninguém Ganhou')
+    } else if (Player === 1 && Machine === 2) {
+      console.log(Player + 'Papel Ganhou')
+      setScore(Score + 1)
+    } else if (Player === 1 && Machine === 3) {
+      console.log(Machine + 'Lagarto Ganhou')
+      setScore(Score - 1)
+    } else if (Player === 1 && Machine === 4) {
+      console.log(Player + 'Papel Ganhou')
+      setScore(Score + 1)
+    } else if (Player === 1 && Machine === 1) {
+      console.log('Ninguém Ganhou')
+    } else if (Player === 2 && Machine === 3) {
+      console.log(Player + 'Pedra Ganhou')
+      setScore(Score + 1)
+    } else if (Player === 2 && Machine === 4) {
+      console.log(Machine + 'Spok Ganhou')
+      setScore(Score - 1)
+    } else if (Player === 2 && Machine === 2) {
+      console.log('Ninguém Ganhou')
+    } else if (Player === 3 && Machine === 4) {
+      console.log(Player + 'Lagarto Ganhou')
+      setScore(Score + 1)
+    } else if (Player === 3 && Machine === 3) {
+      console.log('Ninguém Ganhou')
+    } else if (Player === 4 && Machine === 4) {
+      console.log('Ninguém Ganhou')
+    } else {
+      console.log('fim')
+    }
+  }, [playerCheck])
+
+
+  console.log(Score)
 
   Modal.setAppElement('#root')
 
@@ -51,7 +132,7 @@ export function Home() {
           </span>
           <div className="ScoreDiv">
             <span className="NameScore">SCORE</span>
-            <span className="PointerScore">12</span>
+            <span className="PointerScore">{Score}</span>
           </div>
         </div>
 

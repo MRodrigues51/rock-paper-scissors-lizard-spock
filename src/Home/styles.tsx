@@ -132,6 +132,7 @@ export const Homecontainer = styled.main`
     border-radius: 8px;
     color: #fff;
     letter-spacing: 2px;
+    cursor: pointer;
 
   }
   /* .RulesDiv .Modal {
