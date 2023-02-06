@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   .modal-content {
     background: #fff;
-    color: #fff;
+    color: #c2c2c2;
     width: 90%;
     max-width: 500px;
     padding: 10px;
@@ -27,6 +27,25 @@ export const GlobalStyle = createGlobalStyle`
     left: 0;
     right: 0;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-content-player {
+    background: #fff;
+    color: #c2c2c2;
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .modal-overlay-player {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(circle, #1f3756, #141539);
     display: flex;
     align-items: center;
     justify-content: center;

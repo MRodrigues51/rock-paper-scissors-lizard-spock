@@ -1,10 +1,11 @@
 import Modal from 'react-modal'
+import ReactModal from 'react-modal'
 import { useEffect, useState } from "react"
 import { XCircle } from 'phosphor-react'
 
 import { Homecontainer } from "./styles"
 
-import Logo from '../assets/img/logo-bonus.svg'
+
 import MainBG from '../assets/img/bg-pentagon.svg'
 import IconScissors from '../assets/img/icon-scissors.svg'
 import IconSpock from '../assets/img/icon-spock.svg'
@@ -12,18 +13,22 @@ import IconPaper from '../assets/img/icon-paper.svg'
 import IconLizard from '../assets/img/icon-lizard.svg'
 import IconRock from '../assets/img/icon-rock.svg'
 import RulesBG from '../assets/img/image-rules-bonus.svg'
+import { Header } from '../Components/Header'
+import { ShowPlayer } from '../Components/ShowPlayer'
+
 
 export function Home() {
   const [Player, setPlayer] = useState<number>()
   const [Machine, setMachine] = useState<number>()
   const [Score, setScore] = useState(0)
-
+  // const latestScore = useRef(Score)
   //
   console.log('Aqui é o score' + Score)
   let playerCheck
 
   function PlayerMachine() {
     setMachine(Math.floor(Math.random() * 5))
+
   }
 
   function handleClickScissors() {
@@ -56,90 +61,85 @@ export function Home() {
 
   console.log('A máquina digitou: ' + Machine)
 
-  const Incremment = () => {
-    setScore(Score + 1)
-  }
-  const Decremment = () => {
-    setScore(Score - 1)
-  }
   useEffect(() => {
     if (Player === 0 && Machine === 1) {
       console.log(Player + 'Tesoura Ganhou(Player)')
-      { () => setScore(Score + 1) }
+      setScore(Score + 1)
     } else if (Player === 0 && Machine === 2) {
       console.log(Machine + 'Rock Ganhou(Machine)')
-      { () => setScore(Score - 1) }
+      setScore(Score - 1)
     } else if (Player === 0 && Machine === 3) {
       console.log(Player + 'Tesoura Ganhou(Player)')
-      { () => setScore(Score + 1) }
+      setScore(Score + 1)
     } else if (Player === 0 && Machine === 4) {
       console.log(Machine + 'Spock Ganhou(Machine)')
-      { () => setScore(Score - 1) }
+      setScore(Score - 1)
     } else if (Player === 0 && Machine === 0) {
       console.log('Ninguém Ganhou')
 
     } else if (Player === 1 && Machine === 0) {
       console.log(Machine + 'Papel Ganhou(Machine)')
-      { () => setScore(Score + 1) }
+      setScore(Score - 1)
     } else if (Player === 1 && Machine === 2) {
       console.log(Player + 'Papel Ganhou(Player)')
-      { () => setScore(Score + 1) }
+      setScore(Score + 1)
     } else if (Player === 1 && Machine === 3) {
       console.log(Machine + 'Lagarto Ganhou(Machine)')
-      { () => setScore(Score - 1) }
+      setScore(Score - 1)
     } else if (Player === 1 && Machine === 4) {
       console.log(Player + 'Papel Ganhou(Player)')
-      { () => setScore(Score + 1) }
+      setScore(Score + 1)
     } else if (Player === 1 && Machine === 1) {
       console.log('Ninguém Ganhou')
 
     } else if (Player === 2 && Machine === 0) {
       console.log(Player + 'Pedra Ganhou(Player)')
-      { () => setScore(Score + 1) }
+      setScore(Score + 1)
     } else if (Player === 2 && Machine === 1) {
       console.log(Machine + 'Pedra Ganhou(Machine)')
-      { () => setScore(Score + 1) }
+      setScore(Score - 1)
     } else if (Player === 2 && Machine === 3) {
       console.log(Player + 'Pedra Ganhou(Player)')
-      { () => setScore(Score + 1) }
+      setScore(Score + 1)
     } else if (Player === 2 && Machine === 4) {
-      console.log(Machine + 'Spok Ganhou')
-      { () => setScore(Score - 1) }
+      console.log(Machine + 'Spok Ganhou(Machine)')
+      setScore(Score - 1)
     } else if (Player === 2 && Machine === 2) {
       console.log('Ninguém Ganhou')
 
     } else if (Player === 3 && Machine === 0) {
       console.log(Machine + 'Tesoura Ganhou(Machine)')
-      { () => setScore(Score + 1) }
+      setScore(Score - 1)
     } else if (Player === 3 && Machine === 1) {
       console.log(Player + 'Lagarto Ganhou(Player)')
-      { () => setScore(Score + 1) }
+      setScore(Score + 1)
     } else if (Player === 3 && Machine === 2) {
       console.log(Machine + 'Pedra Ganhou(Machine)')
-      { () => setScore(Score + 1) }
+      setScore(Score - 1)
     } else if (Player === 3 && Machine === 4) {
       console.log(Player + 'Lagarto Ganhou(Player)')
-      { () => setScore(Score + 1) }
+      setScore(Score + 1)
     } else if (Player === 3 && Machine === 3) {
       console.log('Ninguém Ganhou')
 
     } else if (Player === 4 && Machine === 0) {
       console.log(Player + 'Spock Ganhou(Player)')
-      { () => setScore(Score + 1) }
+      setScore(Score + 1)
     } else if (Player === 4 && Machine === 1) {
       console.log(Machine + 'Papel Ganhou(Machine)')
-      { () => setScore(Score + 1) }
+      setScore(Score - 1)
     } else if (Player === 4 && Machine === 2) {
       console.log(Player + 'Spock Ganhou(Player)')
-      { () => setScore(Score + 1) }
+      setScore(Score + 1)
     } else if (Player === 4 && Machine === 3) {
       console.log(Machine + 'Lagarto Ganhou(Machine)')
+      setScore(Score - 1)
     } else if (Player === 4 && Machine === 4) {
       console.log('Ninguém Ganhou')
     } else {
       console.log('fim')
     }
-  })
+  }, [Player, Machine])
 
   console.log(Score)
 
@@ -157,15 +157,8 @@ export function Home() {
   return (
     <Homecontainer>
       <div className="Container">
-        <div className="Header">
-          <span className="imgLogo">
-            <img src={Logo} alt="" />
-          </span>
-          <div className="ScoreDiv">
-            <span className="NameScore">SCORE</span>
-            <span className="PointerScore">{Score}</span>
-          </div>
-        </div>
+        <Header valueScore={Score} />
+        <ShowPlayer valuePlayer={Player} valueMachine={Machine} />
 
         <div className="MainDiv" style={{
           backgroundImage: `url(${MainBG})`,

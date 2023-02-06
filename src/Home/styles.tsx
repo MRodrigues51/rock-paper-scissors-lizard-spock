@@ -10,44 +10,6 @@ export const Homecontainer = styled.main`
     justify-content: center;
     margin-top: 2rem;
   }
-  /* .Container {
-    max-width: 90vw;
-  } */
-  .Header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
-    height: 160px;
-    border: 2px solid #fff;
-    border-radius: 20px;
-    margin: 0;
-  }
-  .ScoreDiv {
-    margin: 0;
-    margin-right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 160px;
-    height: 115px;
-    background: #fff;
-    border-radius: 10px;
-  }
-  .imgLogo {
-    margin-left: 20px;
-  }
-  .PointerScore {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: gray;
-  }
-  .NameScore {
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 0.245rem;
-    color: blue;
-  }
   .MainDiv {
     /* background: #fff; */
     margin-top: 5rem;
