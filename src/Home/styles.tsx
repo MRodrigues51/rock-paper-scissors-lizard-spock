@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Homecontainer = styled.main`
   * {
     background: transparent;
+    border: none;
   }
   div {
     display: flex;
@@ -11,7 +12,6 @@ export const Homecontainer = styled.main`
     margin-top: 2rem;
   }
   .MainDiv {
-    /* background: #fff; */
     margin-top: 5rem;
   }
   .Container {
@@ -23,12 +23,8 @@ export const Homecontainer = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* margin: 0; */
     margin-top: -5rem;
     gap: 1rem;
-    /* background: #834fe3; */
-    /* margin-top: 0; */
-    /* margin-bottom: 0; */
   }
   .ButtonDiv button {
     width: 130px;
@@ -49,15 +45,9 @@ export const Homecontainer = styled.main`
     margin-bottom: -1.5rem;
   }
   .ButtonScissors {
-    /* border-color: linear-gradient(, #ec9e0e, #eca922); */
-    /* border: 10px solid;
-    border-image: linear-gradient(to right, #ec9e0e, #eca922) 1;
-    border-radius: 50%;
-    border-radius: 20px; */
     border: solid 1rem #ec9e0e;
     box-shadow: inset 0px 6px 3px #999,
          0px 6px 3px 1px #222;
-         /* 5px 5px 10px #444; */
   }
   .ButtonSpock {
     border: solid 1rem #40b9ce;
@@ -97,15 +87,7 @@ export const Homecontainer = styled.main`
     cursor: pointer;
 
   }
-  /* .RulesDiv .Modal {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    right: 40px;
-    bottom: 40px;
-    width: 1000px;
-    background-color: papayawhip;
-  } */
+
   .ModalContent h2{
     color: #fff;
     background: #fff;

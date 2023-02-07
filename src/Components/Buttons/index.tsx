@@ -4,53 +4,55 @@ import IconPaper from '../../assets/img/icon-paper.svg'
 import IconLizard from '../../assets/img/icon-lizard.svg'
 import IconRock from '../../assets/img/icon-rock.svg'
 
+import { ButtonStyles } from './styles'
+
 
 export function ButtonScissors() {
   return (
-    <div className="TopDiv">
-      <button className="ButtonScissors" >
+    <ButtonStyles>
+      <button className="ButtonScissorsShow" >
         <img src={IconScissors} alt="" />
       </button>
-    </div>
+    </ButtonStyles>
   )
 }
 
 export function ButtonPaper() {
   return (
-    <div className="TopDiv">
-      <button className="ButtonPaper" >
+    <ButtonStyles>
+      <button className="ButtonPaperShow" >
         <img src={IconPaper} alt="" />
       </button>
-    </div>
+    </ButtonStyles>
   )
 }
 
 export function ButtonRock() {
   return (
-    <div className="TopDiv">
-      <button className="ButtonRock" >
+    <ButtonStyles>
+      <button className="ButtonRockShow" >
         <img src={IconRock} alt="" />
       </button>
-    </div>
+    </ButtonStyles>
   )
 }
 
 export function ButtonLizard() {
   return (
-    <div className="TopDiv">
-      <button className="ButtonLizard" >
+    <ButtonStyles>
+      <button className="ButtonLizardShow" >
         <img src={IconLizard} alt="" />
       </button>
-    </div>
+    </ButtonStyles>
   )
 }
 
 export function ButtonSpock() {
   return (
-    <div className="TopDiv">
-      <button className="ButtonSpock" >
+    <ButtonStyles>
+      <button className="ButtonSpockShow" >
         <img src={IconSpock} alt="" />
       </button>
-    </div>
+    </ButtonStyles>
   )
 }

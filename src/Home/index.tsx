@@ -23,6 +23,10 @@ export function Home() {
   const [Score, setScore] = useState(0)
   const [victory, setVictory] = useState("")
 
+  // const [button, setButton] = useState({
+  //   classNames: ['buttonScissors', 'buttonPaper', 'buttonRock', 'buttonLizard', 'buttonSpock']
+  // })
+
   const [showElement, setShowElement] = useState(false)
   const showOrHide = () => setShowElement(true)
   // const latestScore = useRef(Score)
