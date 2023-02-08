@@ -6,7 +6,6 @@ import IconRock from '../../assets/img/icon-rock.svg'
 
 import { ButtonStyles } from './styles'
 
-
 export function ButtonScissors() {
   return (
     <ButtonStyles>

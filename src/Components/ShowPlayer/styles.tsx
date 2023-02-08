@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 export const ShowDivPlayer = styled.div`
-  * {
 
-  }
   span {
     font-weight: 700;
     font-size: 2.5rem;
-    color: #fff;
+    color: ${(props) => props.theme.white};
     text-align: center;
 
     display: flex;
@@ -16,6 +14,7 @@ export const ShowDivPlayer = styled.div`
     justify-content: center;
     gap: 1rem;
     letter-spacing: 0.25rem;
+    text-transform: uppercase
   }
   .PinTitle {
     display: flex;
@@ -39,7 +38,7 @@ export const ShowDivPlayer = styled.div`
   .PlayAgain {
     border-radius: 8px;
     width: 100px;
-    background: #fff;
+    background: ${(props) => props.theme.white};
     width: 100%;
     height: 50px;
     letter-spacing: 0.25rem;

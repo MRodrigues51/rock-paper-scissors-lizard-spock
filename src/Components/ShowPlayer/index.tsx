@@ -1,23 +1,18 @@
 import { ShowDivPlayer } from './styles'
-import IconScissors from '../../assets/img/icon-scissors.svg'
-import IconSpock from '../../assets/img/icon-spock.svg'
-import IconPaper from '../../assets/img/icon-paper.svg'
-import IconLizard from '../../assets/img/icon-lizard.svg'
-import IconRock from '../../assets/img/icon-rock.svg'
+
 import { ButtonLizard, ButtonPaper, ButtonRock, ButtonScissors, ButtonSpock } from '../Buttons'
 
 interface ShowPlayersProps {
   valuePlayer: number | undefined
   valueMachine: number | undefined
-  valueVictory: string
+
   valueShowElement: (show: boolean) => void
 
 }
-export function ShowPlayer({ valuePlayer, valueMachine, valueVictory, valueShowElement }: ShowPlayersProps) {
+export function ShowPlayer({ valuePlayer, valueMachine, valueShowElement }: ShowPlayersProps) {
   function closeShowElement() {
     valueShowElement(false)
   }
-  console.log('boleano' + valueShowElement)
 
   if (valuePlayer === 0 && valueMachine === 0) {
     return (
@@ -566,22 +561,22 @@ export function ShowPlayer({ valuePlayer, valueMachine, valueVictory, valueShowE
 
 
 
-  // return (
-  //   <ShowDivPlayer>
-  //     <div className='ButtonDiv'>
-  //       <div className="MiddleDiv">
-  //         <button className="ButtonSpock">
+  return (
+    <ShowDivPlayer>
+      {/* <div className='ButtonDiv'>
+        <div className="MiddleDiv">
+          <button className="ButtonSpock">
 
-  //         </button>
-  //         <button className="ButtonPaper">
+          </button>
+          <button className="ButtonPaper">
 
-  //         </button>
-  //       </div>
-  //       <span>Valor de Player: {valuePlayer}</span>
-  //       <span>Valor de Machine: {valueMachine}</span>
-  //       <span>Resultado da jogada: {valueVictory}</span>
-  //       <button onClick={closeShowElement}>Play Again</button>
-  //     </div>
-  //   </ShowDivPlayer>
-  // )
+          </button>
+        </div>
+        <span>Valor de Player: {valuePlayer}</span>
+        <span>Valor de Machine: {valueMachine}</span>
+        <span>Resultado da jogada: {valueVictory}</span>
+        <button onClick={closeShowElement}>Play Again</button>
+      </div> */}
+    </ShowDivPlayer>
+  )
 }

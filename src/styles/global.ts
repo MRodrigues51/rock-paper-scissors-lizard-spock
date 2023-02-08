@@ -7,14 +7,17 @@ export const GlobalStyle = createGlobalStyle`
 
   }
   body {
-    background: radial-gradient(circle, #1f3756, #141539);
+    background: radial-gradient(
+      circle,
+      ${(props) => props.theme.gradientInitial},
+      ${(props) => props.theme.gradientEnd}
+    );
   }
-  body, button {
+  body, button, span {
     font-family: 'Barlow Semi Condensed', sans-serif;
   }
   .modal-content {
-    background: #fff;
-    color: #c2c2c2;
+    background: ${(props) => props.theme.white};
     width: 90%;
     max-width: 500px;
     padding: 10px;
@@ -31,29 +34,11 @@ export const GlobalStyle = createGlobalStyle`
     align-items: center;
     justify-content: center;
   }
-  .modal-content-player {
-    background: #fff;
-    color: #c2c2c2;
-    width: 90%;
-    max-width: 500px;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .modal-overlay-player {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: radial-gradient(circle, #1f3756, #141539);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
   .buttonCloseModal {
     float: right;
     cursor: pointer;
-    color: #c2c2c2;
+    color: ${(props) => props.theme['gray-200']};
     width: 32px;
     height: 32px;
   }

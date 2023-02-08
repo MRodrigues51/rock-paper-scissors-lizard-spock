@@ -30,7 +30,7 @@ export const Homecontainer = styled.main`
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    background: #fff;
+    background: ${(props) => props.theme.white};
     cursor: pointer;
   }
   .TopDiv {
@@ -45,55 +45,46 @@ export const Homecontainer = styled.main`
     margin-bottom: -1.5rem;
   }
   .ButtonScissors {
-    border: solid 1rem #ec9e0e;
-    box-shadow: inset 0px 6px 3px #999,
-         0px 6px 3px 1px #222;
+    border: solid 1rem ${(props) => props.theme["scissors-color"]};
+    box-shadow: inset 0px 6px 3px ${(props) => props.theme["gray-shadow-400"]},
+         0px 6px 3px 1px ${(props) => props.theme["gray-shadow-700"]};
   }
   .ButtonSpock {
-    border: solid 1rem #40b9ce;
-    box-shadow: inset 0px 6px 3px #999,
-         0px 6px 3px 1px #222;
+    border: solid 1rem ${(props) => props.theme["spock-color"]};
+    box-shadow: inset 0px 6px 3px ${(props) => props.theme["gray-shadow-400"]},
+         0px 6px 3px 1px ${(props) => props.theme["gray-shadow-700"]};
   }
   .ButtonPaper {
-    border: solid 1rem #4865f4;
-    box-shadow: inset 0px 6px 3px #999,
-         0px 6px 3px 1px #222;
+    border: solid 1rem ${(props) => props.theme["paper-color"]};
+    box-shadow: inset 0px 6px 3px ${(props) => props.theme["gray-shadow-400"]},
+         0px 6px 3px 1px ${(props) => props.theme["gray-shadow-700"]};
   }
   .ButtonRock {
-    border: solid 1rem #dc2e4e;
-    box-shadow: inset 0px 6px 3px #999,
-         0px 6px 3px 1px #222;
+    border: solid 1rem ${(props) => props.theme["rock-color"]};
+    box-shadow: inset 0px 6px 3px ${(props) => props.theme["gray-shadow-400"]},
+         0px 6px 3px 1px ${(props) => props.theme["gray-shadow-700"]};
   }
   .ButtonLizard {
-    border: solid 1rem #834fe3;
-    box-shadow: inset 0px 6px 3px #999,
-         0px 6px 3px 1px #222;
+    border: solid 1rem ${(props) => props.theme["lizard-color"]};
+    box-shadow: inset 0px 6px 3px ${(props) => props.theme["gray-shadow-400"]},
+         0px 6px 3px 1px ${(props) => props.theme["gray-shadow-700"]};
   }
   .RulesDiv {
     display: flex;
     width: 100vw;
     justify-content: flex-end;
-    /* margin: 0; */
-    /* background: #4865f4; */
   }
   .RulesDiv button {
     width: 100px;
     height: 40px;
     margin-right: 5%;
-    border: 2px solid #fff;
+    border: 2px solid ${(props) => props.theme.white};
     border-radius: 8px;
-    color: #fff;
+    color: ${(props) => props.theme.white};
     letter-spacing: 2px;
     cursor: pointer;
 
   }
 
-  .ModalContent h2{
-    color: #fff;
-    background: #fff;
-  }
-  .CloseModal {
-    background: #fff;
-  }
 
 `

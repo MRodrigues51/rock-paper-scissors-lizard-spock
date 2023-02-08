@@ -8,10 +8,12 @@ export const HeaderContainer = styled.header`
     align-items: center;
     width: 50vw;
     height: 160px;
-    border: 2px solid #fff;
+    border: 2px solid ${(props) => props.theme.white};
     border-radius: 20px;
     margin: 0;
+
   }
+
   .ScoreDiv {
     margin: 0;
     margin-right: 20px;
@@ -20,8 +22,13 @@ export const HeaderContainer = styled.header`
     align-items: center;
     width: 160px;
     height: 115px;
-    background: #fff;
+    background: ${(props) => props.theme.white};
     border-radius: 10px;
+
+    @media only screen and (max-width: 500px) {
+      width: 80px;
+      height: 57.5px;
+    }
   }
   .imgLogo {
     margin-left: 20px;
@@ -29,12 +36,12 @@ export const HeaderContainer = styled.header`
   .PointerScore {
     font-size: 3.5rem;
     font-weight: 700;
-    color: gray;
+    color: ${(props) => props.theme["gray-500"]};
   }
   .NameScore {
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.245rem;
-    color: blue;
+    color: ${(props) => props.theme.score};
   }
 `

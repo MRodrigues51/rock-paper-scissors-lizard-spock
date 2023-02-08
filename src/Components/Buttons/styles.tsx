@@ -13,32 +13,32 @@ export const ButtonStyles = styled.button`
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    background: #fff;
+    background: ${(props) => props.theme.white};
   }
 
   .ButtonScissorsShow {
-    border: solid 1.5rem #ec9e0e;
-    box-shadow: inset 0px 8px 3px #999,
-         0px 8px 3px 1px #222;
+    border: solid 1.5rem ${(props) => props.theme["scissors-color"]};
+    box-shadow: inset 0px 8px 3px ${(props) => props.theme["gray-shadow-400"]},
+         0px 8px 3px 1px ${(props) => props.theme["gray-shadow-700"]};
   }
   .ButtonSpockShow {
-    border: solid 1.5rem #40b9ce;
-    box-shadow: inset 0px 8px 3px #999,
-         0px 8px 3px 1px #222;
+    border: solid 1.5rem ${(props) => props.theme["spock-color"]};
+    box-shadow: inset 0px 8px 3px ${(props) => props.theme["gray-shadow-400"]},
+         0px 8px 3px 1px ${(props) => props.theme["gray-shadow-700"]};
   }
   .ButtonPaperShow {
-    border: solid 1.5rem #4865f4;
-    box-shadow: inset 0px 8px 3px #999,
-         0px 8px 3px 1px #222;
+    border: solid 1.5rem ${(props) => props.theme["paper-color"]};
+    box-shadow: inset 0px 8px 3px ${(props) => props.theme["gray-shadow-400"]},
+         0px 8px 3px 1px ${(props) => props.theme["gray-shadow-700"]};
   }
   .ButtonRockShow {
-    border: solid 1.5rem #dc2e4e;
-    box-shadow: inset 0px 8px 3px #999,
-         0px 8px 3px 1px #222;
+    border: solid 1.5rem ${(props) => props.theme["rock-color"]};
+    box-shadow: inset 0px 8px 3px ${(props) => props.theme["gray-shadow-400"]},
+         0px 8px 3px 1px ${(props) => props.theme["gray-shadow-700"]};
   }
   .ButtonLizardShow {
-    border: solid 1.5rem #834fe3;
-    box-shadow: inset 0px 8px 3px #999,
-         0px 8px 3px 1px #222;
+    border: solid 1.5rem ${(props) => props.theme["lizard-color"]};
+    box-shadow: inset 0px 8px 3px ${(props) => props.theme["gray-shadow-400"]},
+         0px 8px 3px 1px ${(props) => props.theme["gray-shadow-700"]};
   }
 `
