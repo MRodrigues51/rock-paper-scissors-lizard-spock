@@ -47,8 +47,8 @@ export const Homecontainer = styled.main`
   }
   @media screen and (max-width: 400px) {
     .ButtonDiv button {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
     }
   }
 
@@ -77,7 +77,7 @@ export const Homecontainer = styled.main`
   @media screen and (max-width: 400px) {
     .MiddleDiv {
       margin-bottom: 2rem;
-      gap: 12rem;
+      gap: 10rem;
     }
   }
   .BottomDiv {
