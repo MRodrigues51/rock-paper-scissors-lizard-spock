@@ -177,12 +177,8 @@ export function Home() {
             overlayClassName="modal-overlay"
             className="modal-content"
           >
-            <div style={{
+            <div className='RulesBG' style={{
               backgroundImage: `url(${RulesBG})`,
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              width: '500px',
-              height: '500px'
             }}>
               <span className='buttonCloseModal' onClick={handleCloseModal}>
                 <XCircle size={32} weight='fill' />

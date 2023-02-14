@@ -20,8 +20,29 @@ export const GlobalStyle = createGlobalStyle`
     background: ${(props) => props.theme.white};
     width: 90%;
     max-width: 500px;
+    max-height: 500px;
     padding: 10px;
     border-radius: 5px;
+
+  }
+  .RulesBG {
+      padding: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 500px;
+    }
+  @media screen and (min-width: 400px) and (max-width: 700px) {
+    .RulesBG {
+      padding: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 500px;
+    }
+    .modal-content {
+      width: 90%;
+    }
   }
   .modal-overlay {
     position: fixed;
